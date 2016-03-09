@@ -2,7 +2,7 @@
 import sys
 import base64
 
-def base64random(cipherfile):
+def base64randomde(cipherfile):
 	f = open(cipherfile, 'rb')
 	cipher = f.read()
 	f.close()
@@ -19,4 +19,4 @@ def base64random(cipherfile):
 					break
 		cipher = decode
 	print(decode)
-base64random(sys.argv[1])
+base64randomde(sys.argv[1])

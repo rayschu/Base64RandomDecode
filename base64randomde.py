@@ -6,9 +6,7 @@ def base64random(cipherfile):
 	f = open(cipherfile, 'rb')
 	cipher = f.read()
 	f.close()
-
-	i = 2
-	while ( i > 1 ):
+	while (True):
 		try:
 			decode = base64.b16decode(cipher)
 		except TypeError:
@@ -18,8 +16,7 @@ def base64random(cipherfile):
 				try:
 					decode = base64.b64decode(cipher)
 				except TypeError:
-					i = 0
+					break
 		cipher = decode
 	print(decode)
-
 base64random(sys.argv[1])
